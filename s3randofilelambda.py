@@ -36,7 +36,6 @@ def generate_big_random_letters():
                 
         #Upload object to S3, bucket and storage class defined in environment variables
         object = s3.put_object(
-            #Bucket='s3-storage-class-testing-912688296143',
             Bucket = S3Bucket,
             Body = chars,
             Key = objectpath,
