@@ -4,6 +4,7 @@ from datetime import date
 import random
 import string
 
+#Set variables to Lambda environment variables
 S3ObjectsToCreate = int(os.environ['S3ObjectsToCreate'])
 S3Bucket = os.environ['S3Bucket']
 S3StorageClass = os.environ['S3StorageClass']
