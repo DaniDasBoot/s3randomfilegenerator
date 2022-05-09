@@ -45,7 +45,7 @@ def generate_big_random_letters():
     
 def lambda_handler(event, context):
     #Print Lambda invocation event
-    print("Lambda invocation event: " + event)
+    print("Lambda invocation event: " + str(event))
     
     #Print Lambda environment variables
     print("Printing Lambda Environment Variables:")
