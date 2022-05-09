@@ -30,7 +30,7 @@ def generate_big_random_letters():
         #Generate File Data using random ascii charaters, object size is defined in environment variable
         chars = ''.join([random.choice(string.ascii_letters) for i in range(S3ObjectSize)]) #1
         objectpath = S3Prefix + "/" + filedate + "_" + randomprefix + "/" + filename + ".txt"
-        print("Writing S3 object" + objectpath)
+        print("Writing S3 object: " + objectpath)
                 
         #Upload object to S3, bucket and storage class defined in environment variables
         object = s3.put_object(
