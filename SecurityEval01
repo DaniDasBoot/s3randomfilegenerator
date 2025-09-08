@@ -1,4 +1,9 @@
-#SecurityTest
-def integer_overflow_noncompliant():
-    # Noncompliant: Number larger than limit of the datatype is stored.
-    arr = np.array([[100000000]], dtype=np.int8)
+import boto3
+
+s3 = boto3.client('s3')
+
+# Using deprecated list_objects (not list_objects_v2)
+response = s3.list_objects(Bucket='my-bucket')
+
+for obj in response.get('Contents', []):
+    print(obj['Key'])
